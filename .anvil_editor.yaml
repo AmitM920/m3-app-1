@@ -5,6 +5,4 @@ unique_ids:
   modules: {}
   server_modules:
     ServerModule1: '1698935423424530374077543.2288'
-  assets:
-    new_file.css: '1698937680458802355277768.3303'
-    new_file.html: '169893524045080696798760.96082'
+  assets: {}
