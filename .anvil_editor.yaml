@@ -1,8 +1,10 @@
 unique_ids:
   forms:
     Form1: KELW2LILKDM3UZZPVKOHDW4T4LLXEKON
+    Form1.ItemTemplate1: '1698935991577156819875029.95898'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1698935423424530374077543.2288'
   assets:
-    standard-page.html: UXY6VBB6XNJG24ETXQF2YITQYXVBACAX
-    theme.css: RULOGMAD5GUHEVC3NS6FH65EHCIDSHD6
+    new_file.css: '1698937680458802355277768.3303'
+    new_file.html: '169893524045080696798760.96082'
