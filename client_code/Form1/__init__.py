@@ -19,3 +19,7 @@ class Form1(Form1Template):
   def image_1_show(self, **event_args):
     """This method is called when the Image is shown on the screen"""
     pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
