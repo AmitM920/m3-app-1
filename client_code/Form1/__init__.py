@@ -1,6 +1,7 @@
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
+import anvil.http
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -43,28 +44,24 @@ def button_1_click(self, **event_args):
         "Age": age
         # Add other input fields here
     }
-
-    # Define the URL of your FastAPI endpoint
-    url = "http://localhost:8000/predict/"
-
     try:
-        # Make an HTTP POST request to your FastAPI endpoint
-        response = requests.post(url, json=user_data)
+    # Make an HTTP POST request using Anvil's HTTP services
+     response = anvil.http.request('make_post_request', url, user_data)
 
-        # Handle the response from your FastAPI backend
-        if response.status_code == 200:
-            # If the response status code is 200 (OK), you can access the result
-            result = response.json()
-            # Display result to the user
-            self.label_result.text = f"Prediction: {result['prediction']}"
-            # Clear input fields
-            self.clear_input_fields()
-        else:
-            # Handle the case where the request was not successful
-            # Display an error message to the user
-            alert(f"Error: {response.status_code} - {response.text}")
+    # Handle the response from your FastAPI backend
+     if response.status_code == 200:
+        # If the response status code is 200 (OK), you can access the result
+        result = response.json()
+        # Display result to the user
+        self.label_result.text = f"Prediction: {result['prediction']}"
+        # Clear input fields
+        self.clear_input_fields()
+     else:
+        # Handle the case where the request was not successful
+        # Display an error message to the user
+        alert(f"Error: {response.status_code} - {response.text}")
     except Exception as e:
-        alert(f"An error occurred: {str(e)}")
+     alert(f"An error occurred: {str(e)}")
 
 def clear_input_fields(self):
     """Clear input fields after submitting the form"""
