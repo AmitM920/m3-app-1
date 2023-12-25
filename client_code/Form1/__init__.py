@@ -57,12 +57,17 @@ class Form1(Form1Template):
      response = anvil.http.request(url="http://localhost:8000/predict/",
                     method="POST",
                     data=user_data,
-                    )
-     print(f"Response MIME type: {response.content_type}")
-
+                    json=True)
+     result = response.json()
+     console.log(json.dumps(result, indent=4, sort_keys=True))
+     # Display result to the user
+     self.label_result.text = f"Prediction: {result['prediction']}"
      
+    
     except anvil.http.HttpError as e:
-     print(f"Error {e.status}")
+      print(f"Error {e.status}")
+      # Handle the error, you might want to display an alert or update the UI accordingly
+      self.label_result.text = f"Error {e.status}: {e.text}"
     pass
 
     
