@@ -8,8 +8,12 @@ import requests
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
-@anvil.server.callable
-def make_post_request(url, data):
-    response = requests.post(url, json=data)
-    return response
+#url="http://localhost:8000/predict/"
+
+#@anvil.server.callable
+  
+
+#def make_post_request(url, data):
+    #response = requests.post(url, json=data)
+    #return response
 #

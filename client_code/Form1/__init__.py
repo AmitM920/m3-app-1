@@ -21,9 +21,9 @@ class Form1(Form1Template):
     """This method is called when the Image is shown on the screen"""
     pass
 
-def button_1_click(self, **event_args):
+  def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    alert("this messages shows when button is clicked")
+   
     pregnancies = self.txtPregnancies.text
     glucose = self.txtGlucose.text
     blood_pressure = self.txtBloodPressure.text
@@ -32,6 +32,7 @@ def button_1_click(self, **event_args):
     bmi = self.txtBMI.text
     diabetes_pedigree_function = self.txtDiabetesPedigreeFunction.text
     age = self.txtAge.text
+    alert(bmi)
 
     # Create a dictionary with user input data
     user_data = {
@@ -47,31 +48,27 @@ def button_1_click(self, **event_args):
     }
     try:
     # Make an HTTP POST request using Anvil's HTTP services
-     response = anvil.http.request('make_post_request', url, user_data)
+     
 
-    # Handle the response from your FastAPI backend
-     if response.status_code == 200:
-        # If the response status code is 200 (OK), you can access the result
-        result = response.json()
-        # Display result to the user
-        self.label_result.text = f"Prediction: {result['prediction']}"
-        # Clear input fields
-        self.clear_input_fields()
-     else:
-        # Handle the case where the request was not successful
-        # Display an error message to the user
-        alert(f"Error: {response.status_code} - {response.text}")
-    except Exception as e:
-     alert(f"An error occurred: {str(e)}")
+     ###response = anvil.http.request('make_post_request', url, user_data)
+    # result = response.json()
+     #alert("Prediction: {result['prediction']}")###
 
-def clear_input_fields(self):
-    """Clear input fields after submitting the form"""
-    self.txtPregnancies.text = ""
-    self.txtGlucose.text = ""
-    self.txtBloodPressure.text = ""
-    self.txtSkinThickness.text = ""
-    self.txtInsulin.text = ""
-    self.txtBMI.text = ""
-    self.txtDiabetesPedigreeFunction.text = ""
-    self.txtAge.text = ""
-    # Clear other input fields if needed
+     response = anvil.http.request(url="http://localhost:8000/predict/",
+                    method="POST",
+                    data=user_data,
+                    )
+     print(f"Response MIME type: {response.content_type}")
+
+     
+    except anvil.http.HttpError as e:
+     print(f"Error {e.status}")
+    pass
+
+    
+ 
+
+ 
+
+
+
