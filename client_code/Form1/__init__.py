@@ -61,7 +61,7 @@ class Form1(Form1Template):
      result = response.json()
      console.log(json.dumps(result, indent=4, sort_keys=True))
      # Display result to the user
-     self.label_result.text = f"Prediction: {result['prediction']}"
+     #self.label_result.text = f"Prediction: {result['prediction']}"
      
     
     except anvil.http.HttpError as e:
