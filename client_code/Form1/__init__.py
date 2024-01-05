@@ -67,7 +67,7 @@ class Form1(Form1Template):
     except anvil.http.HttpError as e:
       print(f"Error {e.status}")
       # Handle the error, you might want to display an alert or update the UI accordingly
-      self.label_result.text = f"Error {e.status}: {e.text}"
+     # self.label_result.text = f"Error {e.status}: {e.text}"
     pass
 
     
