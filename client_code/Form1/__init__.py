@@ -51,7 +51,7 @@ class Form1(Form1Template):
      
 
      ###response = anvil.http.request('make_post_request', url, user_data)
-    # result = response.json()
+      # result = response.json()
      #alert("Prediction: {result['prediction']}")###
 
      response = anvil.http.request(url="http://localhost:8000/predict/",

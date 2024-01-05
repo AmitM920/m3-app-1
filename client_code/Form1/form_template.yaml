@@ -88,7 +88,6 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZYUATM,LVBKZL'}
   data_bindings:
-  - {property: text, code: 'self.item[''f"Prediction: {result[''prediction'']}"'']',
-    writeback: false}
+  - {property: text, code: '', writeback: false}
 is_package: true
 custom_component: true
