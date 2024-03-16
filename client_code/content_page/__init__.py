@@ -1,4 +1,4 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import content_pageTemplate
 from anvil import *
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.http
 
-class Form1(Form1Template):
+class content_page(content_pageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
