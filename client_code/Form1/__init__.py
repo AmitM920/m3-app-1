@@ -1,5 +1,8 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 import anvil.http
 
@@ -69,6 +72,8 @@ class Form1(Form1Template):
       # Handle the error, you might want to display an alert or update the UI accordingly
      # self.label_result.text = f"Error {e.status}: {e.text}"
     pass
+
+ 
 
     
  

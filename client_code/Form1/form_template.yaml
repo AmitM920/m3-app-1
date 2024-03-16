@@ -75,13 +75,14 @@ components:
   name: txtAge
   layout_properties: {grid_position: 'XGGTOR,FKJAMR'}
 - name: file_loader_1
-  properties: {}
+  properties: {text: upload via image, align: left, spacing_above: none, spacing_below: none}
   type: FileLoader
   layout_properties: {grid_position: 'DTGENP,VWJGUK'}
+  event_bindings: {lost_focus: file_loader_1_lost_focus}
 - type: Button
-  properties: {text: button_1}
+  properties: {text: button_1, align: right}
   name: button_1
-  layout_properties: {grid_position: 'ASSXHT,EORXJT'}
+  layout_properties: {grid_position: 'WZXZYJ,KXHLXW'}
   event_bindings: {click: button_1_click}
 - name: label_result
   properties: {text: ''}
