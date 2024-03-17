@@ -20,7 +20,7 @@ class registration_page(registration_pageTemplate):
     """This method is called when the button is clicked"""
     try:
         # Initiate the Google Sign-In process
-        user = anvil.google.auth.sign_in_with_google()
+        user = anvil.google.auth.authorize()
         
         # Optionally, you can access user information such as email and display name
         email = user['email']
