@@ -25,4 +25,4 @@ components:
     properties: {text: Registration}
     type: Button
     layout_properties: {grid_position: 'OKWMEV,MJIAZT'}
-    event_bindings: {show: button_1_show, click: sign_in_with_google_click_click}
+    event_bindings: {click: sign_in_with_google_click_click}
