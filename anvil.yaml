@@ -6,8 +6,13 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {client_id: 585555592891-96occe6m5ge0ldifspfu94g9culbcvkg.apps.googleusercontent.com,
-    client_secret_enc: Nya18dCDRV4RFpxfgqAfEnD6twmA+BAdWBvz5lQA86JoHqSdZccJdiXZxmuGiDiXomDajKyMQcN7uTkgIcQXzcFr50ZExlXSo6xrJeAS9fD8fpBtOl47QlETWUp47dNiTs026t9HKuV/C1u6MW6FeNliLlZMi9kANOtQ9av1CqAlmAGKwjC9qLvNqB5nAoie5GSmExSmSa7cFWAAgA==}
-startup: {type: form, module: registration_page}
+    client_secret_enc: TdDN4+8goRyCU5krxj132uf4VYt0ZJ1oIhKn6BncKAb3VYxBg8p2T9yGA379n4FKZMWyn47nvaGGaoZtWlPbf/5Cr6/5zUd1ZVZgxk8ESuyfAOT2u80hHhHSycmMp8jnAhGwTsqlxEMFzxJW9NQlbi7MOrnmXSwHYjCb3oh1Va6m69OkmCZpo6ji6cXRX+RvGQub4whxSkPFNdf9vg==,
+    app_origin_redirect: true}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: true, use_google: true}
+  server_config: {user_table: users}
+startup: {type: form, module: login}
 package_name: M3_App_1
 allow_embedding: false
 name: M3 App 1
@@ -26,5 +31,31 @@ db_schema:
       admin_ui: {order: 1, width: 200}
       type: string
     title: Table 1
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: enabled
+      admin_ui: {width: 200, order: 1}
+      type: bool
+    - name: signed_up
+      admin_ui: {width: 200, order: 2}
+      type: datetime
+    - name: password_hash
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: last_login
+      admin_ui: {width: 200, order: 5}
+      type: datetime
+    - name: n_password_failures
+      admin_ui: {order: 6, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {width: 200, order: 7}
+      type: bool
+    title: Users
 uplink_visible: true
 renamed: true
