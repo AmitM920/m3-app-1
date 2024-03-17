@@ -4,7 +4,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-import requests
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -13,12 +12,12 @@ import requests
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
-#url="http://localhost:8000/predict/"
-
-#@anvil.server.callable
-  
-
-#def make_post_request(url, data):
-    #response = requests.post(url, json=data)
-    #return response
-#
+@anvil.server.callable
+# def say_hello(name):
+#   print("Hello, " + name + "!")
+#   return 42
+def register_user_with_google(email, display_name):
+    # Implement logic to register the user using the provided email and display name
+    # You can store the user information in your database or perform any additional tasks required for registration
+    app_tables.users.add_row(email=email, display_name=display_name)
+    pass

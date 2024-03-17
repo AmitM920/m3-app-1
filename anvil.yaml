@@ -5,7 +5,8 @@ services:
   server_config: {}
 - source: /runtime/services/google.yml
   client_config: {}
-  server_config: {}
+  server_config: {client_id: 585555592891-96occe6m5ge0ldifspfu94g9culbcvkg.apps.googleusercontent.com,
+    client_secret_enc: Nya18dCDRV4RFpxfgqAfEnD6twmA+BAdWBvz5lQA86JoHqSdZccJdiXZxmuGiDiXomDajKyMQcN7uTkgIcQXzcFr50ZExlXSo6xrJeAS9fD8fpBtOl47QlETWUp47dNiTs026t9HKuV/C1u6MW6FeNliLlZMi9kANOtQ9av1CqAlmAGKwjC9qLvNqB5nAoie5GSmExSmSa7cFWAAgA==}
 startup: {type: form, module: registration_page}
 package_name: M3_App_1
 allow_embedding: false
