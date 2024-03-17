@@ -18,6 +18,13 @@ db_schema:
   table_1:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: display_name
+      admin_ui: {order: 1, width: 200}
+      type: string
     title: Table 1
+uplink_visible: true
 renamed: true
