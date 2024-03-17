@@ -20,7 +20,7 @@ class registration_page(registration_pageTemplate):
     """This method is called when the button is clicked"""
     try:
         # Initiate the Google Sign-In process
-        user = google_sign_in()
+        user = anvil.google.auth.sign_in_with_google()
         
         # Optionally, you can access user information such as email and display name
         email = user['email']
@@ -37,5 +37,5 @@ class registration_page(registration_pageTemplate):
         alert(f"Google Sign-In failed: {str(e)}")
     pass
   def register_user(self, email, display_name):
-    # Call the server function to register the user
-    anvil.server.call('register_user', email, display_name) 
+        # Call the server function to register the user
+        anvil.server.call('register_user', email, display_name) 
