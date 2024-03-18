@@ -17,5 +17,5 @@ class login(loginTemplate):
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()
    
-    user = anvil.users.login_with_google()
-    anvil.users.signup_with_google()
+   
+  
