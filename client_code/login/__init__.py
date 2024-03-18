@@ -16,6 +16,16 @@ class login(loginTemplate):
 
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()
+
+  def button_1_show(self, **event_args):
+    """This method is called when the Button is shown on the screen"""
+    open_form('content_page')
+    pass
+
+ 
+
+
+    
    
    
   
