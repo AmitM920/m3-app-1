@@ -1,0 +1,11 @@
+properties: []
+is_package: true
+events: []
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:new_file.html', visible: true}
+  data_bindings:
+  - {property: item, code: '', writeback: false}
+custom_component_container: true

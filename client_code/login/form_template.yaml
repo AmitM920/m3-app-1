@@ -9,12 +9,11 @@ components:
   layout_properties: {slot: default}
   components:
   - name: button_1
-    properties: {text: login}
+    properties: {text: button_1}
     type: Button
-    layout_properties: {grid_position: 'TBOLUE,QIVNNB'}
+    layout_properties: {grid_position: 'LGYESS,VYNRSM'}
     event_bindings: {show: button_1_show}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-  components: []
