@@ -20,17 +20,6 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 startup_form: null
 db_schema:
-  table_1:
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: display_name
-      admin_ui: {order: 1, width: 200}
-      type: string
-    title: Table 1
   users:
     client: none
     server: full
@@ -56,6 +45,9 @@ db_schema:
     - name: confirmed_email
       admin_ui: {width: 200, order: 7}
       type: bool
+    - name: email_confirmation_key
+      admin_ui: {width: 200}
+      type: string
     title: Users
 uplink_visible: true
 renamed: true

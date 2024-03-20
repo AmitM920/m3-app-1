@@ -24,7 +24,7 @@ def register_user_with_google(email, display_name):
     # Implement logic to register the user using the provided email and display name
     # You can store the user information in your database or perform any additional tasks required for registration
     app_tables.users.add_row(email=email, display_name=display_name)
-@anvil.server.callable
+
 def open_login_form():
     # Open the login form
-    open_form('login')  
+    open_form('login')
