@@ -74,15 +74,16 @@ components:
   properties: {}
   name: txtAge
   layout_properties: {grid_position: 'XGGTOR,FKJAMR'}
-- name: file_loader_1
-  properties: {text: upload via image, align: left, spacing_above: none, spacing_below: none}
-  type: FileLoader
-  layout_properties: {grid_position: 'DTGENP,VWJGUK'}
-  event_bindings: {}
+- name: button_2
+  properties: {text: button_2}
+  type: Button
+  layout_properties: {grid_position: 'OYIARM,QTYJXL'}
 - type: Button
-  properties: {text: button_1, align: right}
+  properties: {text: 'Upload Manually
+
+      ', align: left, spacing_above: none, spacing_below: none}
   name: button_1
-  layout_properties: {grid_position: 'WZXZYJ,KXHLXW'}
+  layout_properties: {grid_position: 'RBRYRC,RGZGRC', full_width_row: false}
   event_bindings: {click: button_1_click}
 is_package: true
 custom_component: true
